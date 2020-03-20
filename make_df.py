@@ -54,6 +54,7 @@ def make_df(path_to_directory, export_as_csv=True, remove_na=False):
     df['year_of_release'] = pd.DatetimeIndex(df['year_of_release']).year
     df.loc[df['year_of_release'].isna(), 'year_of_release'] = 0
     df['year_of_release'] = df['year_of_release'].astype(int)
+    df = df[df['year_of_release'] != 0]
 
     if remove_na:
         df = df.dropna(subset=['album', 'lyrics'])

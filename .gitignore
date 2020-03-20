@@ -2,5 +2,6 @@ __pycache__
 .ipynb_checkpoints
 .vscode
 artist_files/
-songs.csv
+*.csv
+*.zip
 .DS_Store
